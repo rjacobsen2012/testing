@@ -18,6 +18,7 @@ Vue.use(Vuetify)
 
 Vue.component('trax-root', require('./components/TraxRoot.vue'));
 Vue.component('trips-view', require('./components/partials/TripsView.vue'));
+Vue.component('trip-view', require('./components/partials/TripView.vue'));
 Vue.component('cars-view', require('./components/partials/CarsView.vue'));
 Vue.component('car-view', require('./components/partials/CarView.vue'));
 Vue.component('new-car-view', require('./components/partials/NewCarView.vue'));

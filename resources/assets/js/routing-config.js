@@ -10,6 +10,10 @@ routes = function (Vue) {
             component: Vue.component('trips-view'),
         },
         {
+            path: '/trips/:id',
+            component: Vue.component('trip-view'),
+        },
+        {
             path: '/cars',
             component: Vue.component('cars-view'),
         },

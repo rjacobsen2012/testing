@@ -2,24 +2,12 @@
 
     // Mock endpoints to be changed with actual REST API implementation
 let traxAPI = {
-    getCarsEndpoint() {
-        return '/api/mock-get-cars'
+    carsEndpoint(id = null) {
+        return id ? '/api/car' + '/' + id : '/api/car'
     },
-    getCarEndpoint(id) {
-        return '/api/mock-get-car' + '/' + id;
+    tripsEndpoint(id = null) {
+        return id ? '/api/trip' + '/' + id : '/api/trip';
     },
-    addCarEndpoint() {
-        return '/api/mock-add-car';
-    },
-    deleteCarEndpoint(id) {
-        return '/api/mock-delete-car' + '/' + id;
-    },
-    getTripsEndpoint() {
-        return '/api/mock-get-trips';
-    },
-    addTripEndpoint() {
-        return 'api/mock-add-trip'
-    }
 }
 
 

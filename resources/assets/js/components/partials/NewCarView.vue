@@ -54,7 +54,7 @@
         methods: {
             submit() {
                 if (this.$refs.form.validate()) {
-                    axios.post(traxAPI.addCarEndpoint(), {
+                    axios.post(traxAPI.carsEndpoint(), {
                         year: this.year,
                         make: this.make,
                         model: this.model
@@ -67,8 +67,7 @@
             },
             clear () {
                 this.$refs.form.reset()
-            }
-
+            },
         },
         components: {}
     }

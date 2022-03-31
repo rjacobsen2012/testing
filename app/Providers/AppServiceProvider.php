@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Trip;
+use App\Observers\TripObserver;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,6 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        Trip::observe(TripObserver::class);
     }
 
     /**

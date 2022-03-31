@@ -60,7 +60,7 @@
                 this.date = date;
             },
             fetchCars() {
-                axios.get(traxAPI.getCarsEndpoint())
+                axios.get(traxAPI.carsEndpoint())
                     .then(response => {
                         let cars = [];
                         for(let i = 0; i < response.data.data.length; i++) {
@@ -77,7 +77,7 @@
             },
             submit() {
                 if (this.$refs.form.validate()) {
-                    axios.post(traxAPI.addTripEndpoint(), {
+                    axios.post(traxAPI.tripsEndpoint(), {
                         date: this.date.toISOString(),
                         car_id: this.car,
                         miles: this.miles

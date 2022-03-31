@@ -15,10 +15,12 @@
                         class="elevation-1"
                 >
                     <template slot="items" slot-scope="props">
-                        <td>{{ props.item.date }}</td>
-                        <td>{{ props.item.car.year + ' ' + props.item.car.make + ' ' + props.item.car.model}}</td>
-                        <td>{{ props.item.miles }}</td>
-                        <td>{{ props.item.total }}</td>
+                        <tr @click="rowClicked(props.item.id)">
+                            <td>{{ props.item.date }}</td>
+                            <td>{{ props.item.car.year + ' ' + props.item.car.make + ' ' + props.item.car.model}}</td>
+                            <td>{{ props.item.miles }}</td>
+                            <td>{{ props.item.total }}</td>
+                        </tr>
                     </template>
                 </v-data-table>
             </v-flex>
@@ -54,12 +56,15 @@
         computed: {},
         methods: {
             fetch() {
-                axios.get(traxAPI.getTripsEndpoint())
+                axios.get(traxAPI.tripsEndpoint())
                     .then(response => {
                         this.items = response.data.data;
                     }).catch(e => {
                     console.log(e);
                 });
+            },
+            rowClicked(id) {
+                this.$router.push('/trips/' + id);
             },
             addTripSelected() {
                 this.$router.push('new-trip')
