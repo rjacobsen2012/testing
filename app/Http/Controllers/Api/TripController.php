@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Requests\TripStoreRequest;
-use App\Http\Controllers\Resources\TripResource;
+use App\Http\Requests\TripStoreRequest;
+use App\Http\Resources\TripResource;
 use App\Models\Trip;
 use App\Repositories\TripRepository;
 use Carbon\Carbon;

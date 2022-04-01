@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Requests\CarStoreRequest;
-use App\Http\Controllers\Resources\CarResource;
-use App\Http\Controllers\Resources\CarWithDetailsResource;
+use App\Http\Requests\CarStoreRequest;
+use App\Http\Resources\CarResource;
+use App\Http\Resources\CarWithDetailsResource;
 use App\Models\Car;
 use Exception;
 use Illuminate\Auth\Access\AuthorizationException;

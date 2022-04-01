@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Resources;
+namespace App\Http\Resources;
 
 use App\Models\Trip;
 use Illuminate\Http\Resources\Json\JsonResource;
